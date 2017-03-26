@@ -3,11 +3,11 @@ include 'win32a.inc'
 entry startPoint
 
 section '.data' data readable writeable
-	name	 db 64 dup(0)
-	serial	 db 128 dup(0)
-	namemsg  db 'Enter your name (64 chars max): ', 0
-	scform	 db '%s', 0
-	prform	 db 'Your serial: %s', 10, 0
+	name	db 64 dup(0)
+	serial	db 128 dup(0)
+	namemsg db 'Enter your name (64 chars max): ', 0
+	scform	db '%s', 0
+	prform	db 'Your serial: %s', 10, 0
 
 section '.code' code executable
 startPoint:
