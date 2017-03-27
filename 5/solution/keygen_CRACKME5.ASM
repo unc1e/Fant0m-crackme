@@ -12,8 +12,8 @@ section '.data' data readable writeable
 
 section '.code' code executable
 startPoint:
-	invoke printf, namemsg
-	invoke scanf, scform, name
+	cinvoke printf, namemsg
+	cinvoke scanf, scform, name
 
 	lea esi, [name]
 	lea edi, [serial]
@@ -61,7 +61,7 @@ startPoint:
 
 	.whEnd:
 	mov BYTE[edi], 0x00
-	invoke printf, prform, serial
+	cinvoke printf, prform, serial
 	jmp startPoint
 
 section '.idata'import data readable
